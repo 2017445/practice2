@@ -25,5 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+      working-directory: my_app
     - run: npm run build --if-present
+      working-directory: my_app
     - run: npm test
+      working-directory: my_app
